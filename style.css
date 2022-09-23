@@ -6,6 +6,8 @@ body p {
 }
 body h1 {
   color: #3F5C58;
+  text-align: center;
+  font-size: 32px;
 }
 body h4 {
   color: #3F5C58;
@@ -162,34 +164,29 @@ header .blocks {
   border: 0px;
 }
 
-.products-section {
-  padding: 20px 35px;
-}
-.products-section h1 {
-  font-family: "Montserrat-ExtraLightItalic";
-  font-size: 32px;
-  text-align: center;
-}
-.products-section .products-block {
+.products--section {
   display: flex;
   flex-direction: row;
   gap: 40px;
   align-items: center;
-  justify-content: center;
+  padding: 20px 35px;
 }
-.products-section .products-block .product-card {
-  flex-grow: 1;
-}
-.products-section .products-block .product-card .picture {
-  width: 100%;
+.products--section .product--card {
+  display: flex;
+  flex-direction: column;
   position: relative;
+  flex: 0 0 20%;
+  flex-grow: 1;
+  cursor: pointer;
 }
-.products-section .products-block .product-card .picture:hover .quick-view {
-  transform: translateY(0%);
-  transition: 0.399s;
-  z-index: 1;
+.products--section .product--card .picture- {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url(/images/featured_image_small_living_room_lighting_ideas.jpeg.jpg);
+  background-size: cover;
 }
-.products-section .products-block .product-card .picture .tag {
+.products--section .product--card .picture- .tag {
   position: absolute;
   top: 0;
   z-index: 1;
@@ -198,24 +195,36 @@ header .blocks {
   background-color: #3F5C58;
   color: white;
 }
-.products-section .products-block .product-card .picture .quick-view {
+.products--section .product--card .picture- .quick-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
   color: white;
   text-align: center;
   background-color: #2E3238;
   padding: 15px 30px;
+  transition: 0.4s;
   transform: translateY(100%);
   z-index: -1;
 }
-.products-section .products-block .product-card .picture img {
-  max-width: 260px;
-  height: 350px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
+.products--section .product--card .picture-:hover {
+  background: url(/images/ea26fd_43fd8d4eadf0480a8394a7f30022ae20_mv2_d_5304_7952_s_4_2.webp);
+  background-size: cover;
 }
-.products-section .products-block .product-card .product-content {
+.products--section .product--card .picture-:hover .quick-view {
+  transform: translateY(0);
+  z-index: 3;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products--section .product--card .product-content {
+  background-color: white;
   display: flex;
   background-color: white;
   flex-direction: column;
@@ -223,11 +232,11 @@ header .blocks {
   z-index: 2;
   position: relative;
 }
-.products-section .products-block .product-card .product-content h4 {
+.products--section .product--card .product-content h4 {
   margin: 10px;
   font-size: 21px;
 }
-.products-section .products-block .product-card .product-content p {
+.products--section .product--card .product-content p {
   margin: 0;
   font-size: 17px;
 }
@@ -302,6 +311,9 @@ header .blocks {
   padding: 0px 25px 25px 20px;
 }
 .brands-section .brands-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-color: white;
   width: 30%;
@@ -360,15 +372,18 @@ header .blocks {
 .gallery-section .gallery__item .overlay {
   position: absolute;
   height: 100%;
-  top: 0;
   width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   opacity: 0;
   transition: 0.5s;
   background-color: black;
 }
 .gallery-section .gallery__item .overlay p {
   color: white;
-  margin-top: 50%;
+  vertical-align: middle;
   font-size: 16px;
   text-align: center;
 }
@@ -588,4 +603,83 @@ header .blocks {
      object-fit: cover;
   -o-object-position: 50% 50%;
      object-position: 50% 50%;
+}
+
+.products--section-furniture {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 35px;
+}
+.products--section-furniture .product--card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 0 0 30%;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.products--section-furniture .product--card .picture- {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url(/images/featured_image_small_living_room_lighting_ideas.jpeg.jpg);
+  background-size: cover;
+}
+.products--section-furniture .product--card .picture- .tag {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding: 2px 10px;
+  font-size: 14px;
+  background-color: #3F5C58;
+  color: white;
+}
+.products--section-furniture .product--card .picture- .quick-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  text-align: center;
+  background-color: #2E3238;
+  padding: 15px 30px;
+  transition: 0.4s;
+  transform: translateY(100%);
+  z-index: -1;
+}
+.products--section-furniture .product--card .picture-:hover {
+  background: url(/images/ea26fd_43fd8d4eadf0480a8394a7f30022ae20_mv2_d_5304_7952_s_4_2.webp);
+  background-size: cover;
+}
+.products--section-furniture .product--card .picture-:hover .quick-view {
+  transform: translateY(0);
+  z-index: 3;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.products--section-furniture .product--card .product-content {
+  background-color: white;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+.products--section-furniture .product--card .product-content h4 {
+  margin: 10px;
+  font-size: 21px;
+}
+.products--section-furniture .product--card .product-content p {
+  margin: 0;
+  font-size: 17px;
 }/*# sourceMappingURL=style.css.map */
