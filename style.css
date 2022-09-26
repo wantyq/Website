@@ -548,7 +548,7 @@ header .blocks {
 }
 
 .section-about {
-  padding: 30px;
+  padding: 0 30px 30px 30px;
 }
 .section-about .hero {
   display: flex;
@@ -682,4 +682,33 @@ header .blocks {
 .products--section-furniture .product--card .product-content p {
   margin: 0;
   font-size: 17px;
+}
+
+.section-about {
+  padding: 0 30px 30px 30px;
+}
+.section-about .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2E3238;
+  color: white;
+  padding: 50px;
+}
+.section-about .hero h1 {
+  color: white;
+  font-size: 54px;
+  margin: 15px;
+}
+.section-about .hero p {
+  color: white;
+  font-size: 17px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.shop-all {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=style.css.map */

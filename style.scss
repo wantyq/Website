@@ -652,7 +652,7 @@ header {
 // ABOUT
 
 .section-about {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
 
     .hero {
         display: flex;
@@ -803,3 +803,38 @@ header {
     }
 }
 
+//Lighting
+
+.section-about {
+    padding: 0 30px 30px 30px;
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #2E3238;
+        color: white;
+        padding: 50px;
+
+        h1 {
+            color: white;
+            font-size: 54px;
+            margin: 15px;
+        }
+
+        p {
+            color: white;
+            font-size: 17px;
+            max-width: 600px;
+            text-align: center;
+        }
+    }
+}
+
+//SHOP-ALL
+
+.shop-all {
+    display: flex;
+    flex-direction: row;
+}
